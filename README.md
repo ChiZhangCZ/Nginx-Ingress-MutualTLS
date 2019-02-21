@@ -53,7 +53,7 @@ We can now deploy our sample webapp. Note the annotations in the ing.yaml file t
 ...
 ```
 
-Here, these annotations enable client verification(mutual TLS) and specify the secret containing our generated CA certificate. Our backend certificate is specified in the tls section:
+Here, these annotations enable client verification(mutual TLS) and specify the secret containing our generated CA certificate(secret "demo-ca" in the default namespace). The secret containing our backend certificate is specified in the tls section:
 ```
 ...
 tls:
