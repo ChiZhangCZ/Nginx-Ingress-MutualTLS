@@ -85,7 +85,7 @@ Find your Nginx Ingress Controller's External IP by the command:
 kubectl get svc --namespace=ingress-nginx
 ```
 
-Note: If you are running kubernetes on AWS, you will see a load balancer DNS instead of an IP, to get the IP you need run:
+Note: If you are running kubernetes on AWS, you will see a load balancer DNS instead of an IP, to get the IP you need to run:
 ```
 nslookup <Load Balancer DNS>
 
