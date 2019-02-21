@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/auth-tls-verify-client: "on"
+    nginx.ingress.kubernetes.io/auth-tls-secret: "default/demo-ca"
+    nginx.ingress.kubernetes.io/auth-tls-ver_certificateify-depth: "1"
+  name: nginxhello-ingress
+  namespace: default
+spec:
+  rules:
+  - host: nginxhello.com
+    http:
+      paths:
+      - backend:
+          serviceName: nginxhello-svc
+          servicePort: 80
+        path: /
+  tls:
+  - hosts:
+    - nginxhello.com
+    secretName: demo-tls
