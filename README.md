@@ -44,7 +44,24 @@ Note: If the Kubernetes Secret name is changed when it is created, the same chan
 
 # Create Kubernetes Resources
 
-We can now deploy our sample webapp. Note the annotations in the ing.yaml file that enable Mutual TLS.
+We can now deploy our sample webapp. Note the annotations in the ing.yaml file that enable Mutual TLS:
+```
+...
+  annotations:
+    nginx.ingress.kubernetes.io/auth-tls-verify-client: "on"
+    nginx.ingress.kubernetes.io/auth-tls-secret: "default/demo-ca"
+...
+```
+
+Here, these annotations enable client verification(mutual tls) and specify the secret containing our generated CA certificate. Our backend certificate is specified in the tls section:
+```
+...
+tls:
+  - hosts:
+    - nginxhello.com
+    secretName: demo-tls
+...    
+```
 
 Create the deployment:
 ```
