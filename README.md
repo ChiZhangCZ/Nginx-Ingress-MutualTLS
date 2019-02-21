@@ -1,4 +1,4 @@
-# NGINX Ingress controller
+# Mutual TLS with Nginx Ingress Controleer
 Based on instructions from: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/auth/client-certs, https://medium.com/@awkwardferny/configuring-certificate-based-mutual-authentication-with-kubernetes-ingress-nginx-20e7e38fdfca
 
 How to enable Mutual TLS with Nginx Ingress Controller.
@@ -53,7 +53,7 @@ We can now deploy our sample webapp. Note the annotations in the ing.yaml file t
 ...
 ```
 
-Here, these annotations enable client verification(mutual tls) and specify the secret containing our generated CA certificate. Our backend certificate is specified in the tls section:
+Here, these annotations enable client verification(mutual TLS) and specify the secret containing our generated CA certificate. Our backend certificate is specified in the tls section:
 ```
 ...
 tls:
