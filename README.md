@@ -1,5 +1,5 @@
 # NGINX Ingress controller
-Based on instructions from: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/auth/client-certs
+Based on instructions from: https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/auth/client-certs, https://medium.com/@awkwardferny/configuring-certificate-based-mutual-authentication-with-kubernetes-ingress-nginx-20e7e38fdfca
 
 How to enable Mutual TLS with Nginx Ingress Controller.
 
